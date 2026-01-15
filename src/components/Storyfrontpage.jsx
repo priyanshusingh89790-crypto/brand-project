@@ -49,7 +49,7 @@ const Storyfrontpage = () => {
         </div>
 
         {/* ICON GRID */}
-        <div className="ml-0 grid lg:max-w-full grid-cols-1 lg:gap-4 gap-8 md:grid-cols-3 lg:py-10 lg:p-0">
+        <div className="ml-0 grid lg:max-w-[80%] grid-cols-1 lg:gap-8 gap-8 md:grid-cols-3 lg:py-5 ">
 
           {/* Fresh Ingredients */}
           <div className="flex flex-col items-center lg:gap-2 text-center px-2">
@@ -62,13 +62,13 @@ const Storyfrontpage = () => {
               </svg>
             </div>
             <h3 className="font-display mb-1 text-lg font-semibold">Fresh Ingredients</h3>
-            <p className="text-[15px] text-stone-500 font-lato leading-5  max-w-[180px] text-start pl-4">
+            <p className="text-[15px] text-stone-500 font-lato leading-5  max-w-[200px] text-start">
               Locally sourced, organic produce delivered daily to our kitchen.
             </p>
           </div>
 
           {/* Made With Love */}
-          <div className="flex flex-col items-center gap-2 lg:gap-3 text-center px-2">
+          <div className="flex flex-col items-center gap-2 lg:gap-2 text-center ">
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-amber-100">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="#b45309" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
@@ -76,14 +76,14 @@ const Storyfrontpage = () => {
                 <path d="M20.8 4.6c-1.7-1.7-4.5-1.7-6.3 0l-.5.5-.5-.5c-1.7-1.7-4.5-1.7-6.3 0-1.7 1.7-1.7 4.5 0 6.3l6.8 6.8 6.8-6.8c1.8-1.8 1.8-4.6 0-6.3z" />
               </svg>
             </div>
-            <h3 className="font-display mb-1 text-lg font-semibold">Made with Love</h3>
+            <h3 className="font-display text-lg font-semibold">Made with Love</h3>
             <p className="text-[15px] text-stone-500 font-lato leading-5 w-full max-w-[180px] text-start pl-5">
               Every dish is crafted with passion by our award-winning chefs.
             </p>
           </div>
 
           {/* Artisan Coffee */}
-          <div className="flex flex-col items-center gap-2 lg:gap-3 text-center px-2">
+          <div className="flex flex-col items-center gap-2 lg:gap-2 text-center px-2">
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-amber-100">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="#b45309" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
@@ -95,8 +95,8 @@ const Storyfrontpage = () => {
                 <path d="M14 2c0 1 1 2 1 3s-1 2-1 3" />
               </svg>
             </div>
-            <h3 className="font-display mb-1 text-lg font-semibold">Artisan Coffee</h3>
-            <p className="text-[15px] pl-5 text-stone-500 font-lato leading-5 w-full max-w-[180px] text-start">
+            <h3 className="font-display text-lg font-semibold">Artisan Coffee</h3>
+            <p className="text-[15px] pl-4 text-stone-500 font-lato leading-5 w-full max-w-[180px]  text-start">
               Premium beans roasted in-house for the perfect cup every time.
             </p>
           </div>

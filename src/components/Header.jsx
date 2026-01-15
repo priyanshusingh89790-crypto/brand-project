@@ -12,8 +12,25 @@ const AppLayout = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToFooterSection = () => {
-    document.getElementById('footer-section')?.scrollIntoView({
+  const scrollToAbout = () => {
+    document.getElementById('about')?.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
+  const scrollToServices = () => {
+    document.getElementById('services')?.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+  const scrollToReservation = () => {
+    document.getElementById('reservation')?.scrollIntoView({
       behavior: 'smooth',
     })
   }
@@ -22,10 +39,10 @@ const AppLayout = () => {
     <div className="flex flex-col">
       {/* FULL WIDTH BACKGROUND HEADER */}
       <header
-        className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 md:h-[6vh] lg:h-[10vh] ${scrolled ? 'border-black bg-amber-50 text-black shadow-2xl' : 'border-white/40 bg-black/50 text-white'} `}
+        className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 md:h-[6vh] lg:h-[7vh] ${scrolled ? 'border-black bg-amber-50 text-black shadow-2xl' : 'border-white/40 bg-black/50 text-white'} `}
       >
         {/* CONTENT CONTAINER */}
-        <div className="relative mx-auto flex max-w-full items-center justify-between overflow-hidden px-4 py-4 md:max-w-[90%] md:py-8 lg:max-w-[70%] lg:py-10 xl:max-w-[70%]">
+        <div className="relative mx-auto flex max-w-full items-center justify-between overflow-hidden px-4 py-4 md:max-w-[90%] md:py-8 lg:max-w-[70%] lg:py-4 xl:max-w-[70%]">
           {/* LOGO / CLICK HOME */}
           <div
             onClick={() => navigate('/')}
@@ -34,13 +51,13 @@ const AppLayout = () => {
 
           {/* TITLE CENTERED */}
           <h1
-            className={`absolute text-lg font-bold transition-all duration-300 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${scrolled ? 'text-black' : 'text-white'} `}
+            className={`fixed text-lg font-bold transition-all duration-300 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${scrolled ? 'text-stone-800' : 'text-white'} `}
           >
             I Heart Cafe
           </h1>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden items-center text-xs font-medium sm:text-sm md:text-base lg:flex lg:gap-10 lg:text-base xl:text-base">
+          <nav className="hidden items-center font-medium sm:text-sm md:text-base lg:flex lg:gap-10 lg:text-[14px] xl:text-[14px]">
             <a
               onClick={() => navigate('/')}
               className="font-lato cursor-pointer hover:border-b-2 hover:border-orange-500 hover:text-orange-500"
@@ -48,22 +65,28 @@ const AppLayout = () => {
               Home
             </a>
             <a
-              onClick={scrollToFooterSection}
-              className="font-lato cursor-pointer hover:border-b-2 hover:border-orange-500 hover:text-orange-500"
+              onClick={scrollToAbout}
+              className="font-lato cursor-pointer hover:border-b-2 text-[14px] hover:border-orange-500 hover:text-orange-500"
             >
               About
             </a>
             <a
-              onClick={scrollToFooterSection}
-              className="font-lato cursor-pointer hover:border-b-2 hover:border-orange-500 hover:text-orange-500"
+              onClick={scrollToContact}
+              className="font-lato cursor-pointer hover:border-b-2 text-[14px] hover:border-orange-500 hover:text-orange-500"
             >
               Contact
             </a>
             <a
-              onClick={() => navigate('/cart')}
-              className="font-lato cursor-pointer hover:border-b-2 hover:border-orange-500 hover:text-orange-500"
+              onClick={scrollToReservation}
+              className={"font-lato cursor-pointer hover:border-b-2 text-[14px] hover:border-orange-500 hover:text-orange-500 "}
             >
-              Cart
+              Reservation
+            </a>
+            <a
+              onClick={scrollToServices}
+              className="font-lato cursor-pointer text-black p-2  text-[14px] rounded-lg bg-amber-400 hover:bg-orange-200 hover:text-black"
+            >
+              Ways to Enjoy
             </a>
           </nav>
 
@@ -101,22 +124,22 @@ const AppLayout = () => {
               Home
             </a>
             <a
-              onClick={() => (scrollToFooterSection(), setopen(false))}
+              onClick={() => (scrollToAbout(), setopen(false))}
               className="font-lato hover:text-orange-500"
             >
               About
             </a>
             <a
-              onClick={() => (scrollToFooterSection(), setopen(false))}
+              onClick={() => (scrollToContact(), setopen(false))}
               className="font-lato hover:text-orange-500"
             >
               Contact
             </a>
             <a
-              onClick={() => (navigate('/cart'), setopen(false))}
+              onClick={() => (scrollToServices(), setopen(false))}
               className="font-lato hover:text-orange-500"
             >
-              Cart
+              Ways to Enjoy
             </a>
           </div>
         </nav>

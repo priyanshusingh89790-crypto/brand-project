@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 const Cardsfrontpage = () => {
   const navigate = useNavigate()
   return (
-    <div className="relative h-auto lg:h-[90vh] min-h-[90vh] pt-6 pb-6">
+    <div className="relative h-auto lg:h-[90vh] min-h-[90vh] lg:pt-20 pt-10 pb-6">
       <div className="flex flex-col items-center lg:pb-10 justify-center">
         <h1 className="text-base text-amber-500 md:text-base font-lato lg:text-base">
           WHAT WE OFFER
@@ -21,11 +21,11 @@ const Cardsfrontpage = () => {
         </p>
       </div>
       {/* CARDS SECTION */}
-      <div className="grid items-center lg:gap-1 gap-10 pt-6 lg:pt-8 lg:pb-10 md:grid-cols-2">
+<div className="flex flex-col lg:flex-row items-center justify-center lg:max-w-[56%] mx-auto gap-6 lg:gap-2 py-10">
         {/* STORE CARD */}
         <div
           onClick={() => navigate('/shopping')}
-          className="animate-slideRight h-[30vh] w-96 py-4 px-4 mx-auto max-w-[90%] flex cursor-pointer group items-center justify-start rounded-xl border-[1px] border-stone-400/30 bg-stone-200/50 shadow-xl transition-all duration-100 hover:scale-101 hover:border-amber-500 lg:h-88 lg:w-[600px] pl-12 "
+          className="animate-slideRight h-[30vh] w-full py-4 px-4 mx-auto max-w-[90%] flex cursor-pointer group items-center justify-start rounded-xl border-[1px] border-stone-400/30 bg-stone-200/50 hover:shadow-xl transition-all duration-100 hover:scale-101 hover:border-amber-500 lg:h-88 lg:w-[500px] lg:pl-12 "
         >
           <button className="text-center cursor-pointer">
             <h1 className="flex gap-2 items-center text-base font-lato duration-300 transition-colors text-yellow-500 md:text-lg lg:items-center lg:text-base">
@@ -61,7 +61,7 @@ const Cardsfrontpage = () => {
         {/* MENU CARD */}
         <div
           onClick={() => window.open('https://iheartcafeindia.com/')}
-          className="animate-slideLeft py-4  mx-auto max-w-[90%] flex h-64 w-96 pb-4 group cursor-pointer items-center justify-start rounded-xl border-[1px] border-stone-400/30 bg-stone-200/50 pr-12 shadow-xl hover:border-amber-500 hover:scale-101 lg:h-88 lg:w-[600px] lg:pl-12"
+          className="animate-slideLeft py-4 px-4 mx-auto max-w-[90%] flex h-[30vh] w-full pb-4 group cursor-pointer transition-all duration-100 items-center justify-start rounded-xl border-[1px] border-stone-400/30 bg-stone-200/50 pr-12 hover:shadow-xl hover:border-amber-500 hover:scale-101 lg:h-88 lg:w-[500px] lg:pl-12"
         >
           <button className="text-center cursor-pointer group-hover:border-amber-500">
             <h1 className="flex items-center gap-2 text-base text-yellow-500 md:text-lg lg:text-base font-lato">
@@ -93,10 +93,10 @@ const Cardsfrontpage = () => {
             <span className="flex text-base font-lato text-gray-600 md:text-lg lg:text-base">
               Fresh, flavorful & handcrafted.
             </span>
-            <span className="flex pb-2 font-lato text-gray-600">
+            <span className="flex pb-1 font-lato text-gray-600">
               Your favorites, ready when you are.
             </span>
-            <span className="mt-2 block w-[60%] border-[1px] font-lato rounded-xl bg-white p-2 text-sm font-bold text-stone-700 md:text-lg lg:w-[70%] lg:text-base">
+            <span className="mt-4 md:w-[70%] block w-[60%] border-[1px] font-lato rounded-xl bg-white p-2 text-sm font-bold text-stone-700 md:text-lg lg:w-[70%] lg:text-base">
               Explore Menu ❯
             </span>
           </button>

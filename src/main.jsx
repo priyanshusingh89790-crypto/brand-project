@@ -3,8 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
 import Header from "./components/Header";
-import Frontpage from "./components/Frontpage";
-import About from "./components/About";     
+import Frontpage from "./components/Frontpage";     
 
 const App = () => {
   return ( <div>
@@ -24,10 +23,6 @@ const appRouter = createBrowserRouter([
       {
         index: true,    
         element: <Frontpage />,
-      },
-      {
-        path: "about",
-        element: <About />,
       },
     ],
   },

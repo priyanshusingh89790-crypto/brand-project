@@ -2,7 +2,7 @@ const About=()=>{
     return(
         <div>
             <button onClick={()=>
-                document.getElementById("footer-section").scrollIntoView({
+                document.getElementById("About").scrollIntoView({
                     behavior:"smooth",
                 })
             }>About</button>

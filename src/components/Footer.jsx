@@ -1,11 +1,9 @@
-import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-  const navigate = useNavigate();
 
   return (
     <div className=" bg-amber-950 w-full">
-   <footer id="footer-section" className="bg-amber-950 text-white">
+   <footer className="bg-amber-950 text-white">
   <div className="max-w-7xl pt-10 mx-auto w-full px-6">
     
     {/* Top Section */}
