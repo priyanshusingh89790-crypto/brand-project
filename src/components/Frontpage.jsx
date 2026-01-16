@@ -3,12 +3,13 @@ import Storyfrontpage from './Storyfrontpage'
 import Reservetable from './Reservetable'
 import Contact from './Contact'
 import Footer from './Footer'
+import Feedback from './Feedback'
 
 const Frontpage = () => {
   return (
     <div>
-      <div className="relative h-auto w-full text-white">
-        <div className="relative min-h-[90vh] w-full text-white">
+      <div className="relative h-auto w-full  text-white">
+        <div className="relative min-h-[101vh] w-full text-white">
           {/* Background Video */}
           <div className="absolute inset-0 h-full w-full overflow-hidden">
             <img
@@ -25,7 +26,7 @@ const Frontpage = () => {
 
           {/* INNER CONTENT (free + centered) */}
           <div className="relative flex min-h-[90vh] flex-col items-center justify-center gap-4">
-            <h1 className="font-lato rounded-full bg-stone-700/50 p-1 px-5 text-base text-amber-500 md:text-base lg:text-base">
+            <h1 className="font-lato rounded-full bg-stone-700/50 p-1 px-5 text-sm text-amber-500 md:text-base lg:text-base">
               EST.2016
             </h1>
 
@@ -33,14 +34,14 @@ const Frontpage = () => {
               Welcome to <b className="text-amber-500">I Heart Café</b>
             </b>
 
-            <p className="w-[70%] pb-3 md:w-[80%] md:p-3 lg:w-[40%] lg:p-5">
+            <p className="w-[60%] pb-3 md:w-[80%] md:p-3 lg:w-[40%] lg:p-5">
               <span className="font-lato text-base leading-snug font-[400px] text-white drop-shadow-lg delay-200 md:text-xl lg:text-[20px]">
                 —your comfort spot in Haldwani & Bhimtal. Coffee, food, and
                 great vibes. Work, relax, or meet friends — you’re welcome here.
               </span>
             </p>
 
-            <div className="flex items-center gap-4">
+            <div className="lg:flex lg:flex-col items-center gap-4">
               <button
                 onClick={() =>
                   window.open(
@@ -70,6 +71,9 @@ const Frontpage = () => {
 
         <div id="services">
           <Cardsfrontpage />
+        </div>
+        <div id="feedback">
+          <Feedback />
         </div>
 
         <div id="contact">

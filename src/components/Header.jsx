@@ -1,10 +1,29 @@
 import { useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const AppLayout = () => {
   const [open, setopen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const navigate = useNavigate()
+  const menuRef=useRef()
+  useEffect(() => {
+  function handleClickOutside(event) {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setopen();
+    }
+  }
+
+  if (open) {
+    document.addEventListener("mousedown", handleClickOutside);
+  } else {
+    document.removeEventListener("mousedown", handleClickOutside);
+  }
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [open]);
+
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10)
@@ -92,24 +111,37 @@ const AppLayout = () => {
 
           {/* MOBILE HAMBURGER */}
           <button
-            onClick={() => setopen(!open)}
-            className="flex cursor-pointer flex-col space-y-1 lg:hidden"
-          >
-            {['', '', ''].map((_, i) => (
-              <span
-                key={i}
-                className={`block h-[2px] w-6 transition-all duration-300 ${
-                  scrolled ? 'bg-black' : 'bg-white'
-                }`}
-              ></span>
-            ))}
-          </button>
+  onClick={() => setopen(!open)}
+  className="flex cursor-pointer flex-col space-y-1 lg:hidden"
+>
+  {['top', 'middle', 'bottom'].map((pos, i) => (
+    <span
+      key={i}
+      className={`
+        block h-[2px] w-6 transition-all duration-300
+        ${scrolled ? 'bg-black' : 'bg-white'}
+        ${
+          open
+            ? pos === 'top'
+              ? 'translate-y-[6px] rotate-45'
+              : pos === 'middle'
+              ? 'opacity-0'
+              : '-translate-y-[6px] -rotate-45'
+            : ''
+        }
+      `}
+    ></span>
+  ))}
+</button>
+
+          
+          
         </div>
       </header>
 
       {/* MOBILE DROPDOWN NAV */}
       {open && (
-        <nav
+        <nav ref={menuRef}
           className={`fixed left-0 z-40 flex w-full flex-col gap-4 p-4 pt-[70px] text-lg transition-all duration-300 lg:hidden ${
             scrolled
               ? 'border-black bg-amber-50 text-black'
@@ -144,6 +176,7 @@ const AppLayout = () => {
           </div>
         </nav>
       )}
+      
     </div>
   )
 }
