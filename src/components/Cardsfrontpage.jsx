@@ -4,10 +4,10 @@ const Cardsfrontpage = () => {
   return (
     <div className="relative h-auto lg:h-[90vh] min-h-[90vh] lg:pt-20 pt-10 pb-6">
       <div className="flex flex-col items-center lg:pb-10 justify-center">
-        <h1 className="text-base text-amber-500 md:text-base font-lato lg:text-base">
+        <h1 className="text-[15px] text-amber-500 md:text-base font-lato lg:text-base">
           WHAT WE OFFER
         </h1>
-        <h2 className="text-4xl text-black md:text-4xl p-1 lg:text-6xl font-semibold">
+        <h2 className="text-2xl text-black md:text-4xl p-1 lg:text-6xl font-semibold">
           Our Services
         </h2>
         <p className="flex text-center item-center w-[80%] p-3 lg:w-[50%]">
@@ -21,7 +21,7 @@ const Cardsfrontpage = () => {
         </p>
       </div>
       {/* CARDS SECTION */}
-<div className="flex flex-col lg:flex-row items-center justify-center lg:max-w-[56%] mx-auto gap-6 lg:gap-2 py-10">
+<div className="flex flex-col max-w-full md:max-w-[50%] lg:flex-row items-center justify-center lg:max-w-[56%] mx-auto gap-6 lg:gap-2 py-10">
         {/* STORE CARD */}
         <div
           onClick={() => navigate('/shopping')}

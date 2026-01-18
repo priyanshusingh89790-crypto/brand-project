@@ -6,11 +6,11 @@ const ReserveTable = () => {
           RESERVATIONS
         </h1>
 
-        <h1 className="text-4xl font-semibold lg:pb-2 text-white md:text-3xl lg:text-6xl font-display">
+        <h1 className="text-2xl font-semibold lg:pb-2 text-white md:text-3xl lg:text-6xl font-display">
           Book Your Table
         </h1>
 
-        <span className="pt-2 pb-4 lg:pb-6 text-center font-lato lg:w-[30%] text-stone-300 md:text-lg lg:text-lg leading-6">
+        <span className="lg:pt-2 pb-2 text-[14px] lg:pb-6 text-center font-lato lg:w-[30%] text-stone-300 md:text-lg lg:text-lg leading-6">
           Reserve your spot for an unforgettable dining experience. We'll confirm your booking within 24 hours.
         </span>
 

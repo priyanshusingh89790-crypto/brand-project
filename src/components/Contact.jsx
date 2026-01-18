@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className=" bg-stone-300/50 h-auto p-10 items-center justify-center w-full">
+    <div className="  h-auto lg:p-10 p-5 items-center justify-center w-full">
       {/* HEADING */}
       
       
@@ -17,9 +17,9 @@ const Contact = () => {
       </div>
 
       {/* INFO CARDS */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 pb-15 pt-5 lg:grid-cols-4 gap-6 lg:max-w-[70%] mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 pb-15 pt-5 lg:grid-cols-4 gap-6 max-w-auto lg:max-w-[70%] mx-auto">
       {/* Visit Us - Location Pin Icon */}
-      <div className="flex flex-col items-center w-full  text-center gap-4 p-6 bg-stone-100/60 border border-stone-300 rounded-2xl">
+      <div className="flex flex-col items-center lg:w-full text-center gap-4 p-6 bg-stone-200/20 border border-stone-300 rounded-lg">
         <div className="w-12 h-12 rounded-full bg-stone-300/30 flex items-center justify-center">
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
             <path 
@@ -40,7 +40,7 @@ const Contact = () => {
       </div>
 
       {/* Call Us - Phone Icon */}
-      <div className="flex flex-col items-center w-full text-center gap-4 p-6 border border-stone-300 bg-stone-100/60 rounded-2xl">
+      <div className="flex flex-col items-center w-full text-center gap-4 p-6 bg-stone-200/20 border border-stone-300 rounded-lg">
         <div className="w-12 h-12 rounded-full bg-stone-300/30 flex items-center justify-center">
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
             <path 
@@ -60,7 +60,7 @@ const Contact = () => {
       </div>
 
       {/* Mail Us - Envelope Icon */}
-      <div className="flex flex-col items-center w-full text-center gap-4 p-6 border border-stone-300 bg-stone-100/60 rounded-2xl">
+      <div className="flex flex-col items-center w-full text-center gap-4 p-6 bg-stone-200/20 border border-stone-300 rounded-lg">
         <div className="w-12 h-12 rounded-full bg-stone-300/30 flex items-center justify-center">
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
             <rect x="2" y="4" width="20" height="16" rx="2" stroke="#f59e0b" strokeWidth="2" />
@@ -75,7 +75,7 @@ const Contact = () => {
       </div>
 
       {/* Opening Hours - Clock Icon */}
-      <div className="flex flex-col items-center w-full text-center gap-4 p-6 border border-stone-300 bg-stone-100/60 rounded-2xl">
+      <div className="flex flex-col items-center w-full text-center gap-4 p-6 bg-stone-200/20 border border-stone-300 rounded-lg">
         <div className="w-12 h-12 rounded-full bg-stone-300/30 flex items-center justify-center">
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" stroke="#f59e0b" strokeWidth="2" />
